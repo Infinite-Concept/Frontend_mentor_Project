@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    width: 550px;
+    max-width: 100%;
+    display: flex;
+    height: auto;
+    gap: 30px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container_image{
+    width: 550px;
+    height: auto;
+    background: url(./images/image-product-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    width: 420px;
+    margin-right: 40px;
+}
+
+.content p:first-child {
+    color: hsl(212, 21%, 14%);
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 25px 0 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.content h1{
+    font-weight: 900;
+    color: hsl(0, 0%, 0%);
+    line-height: 29px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.content p:nth-child(3){
+    color: sl(228, 12%, 48%);
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.content div{
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.content div h2{
+    font-size: 30px;
+    font-weight: 900;
+    color: hsl(158, 36%, 37%);
+}
+
+.content div small{
+    text-decoration: line-through;
+    color: hsl(212, 21%, 14%);
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 14px 0;
+    background-color: hsl(158, 36%, 37%);
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+button img{
+    margin-right: 5px;
+}
+
+button:hover{
+    background-color: hsl(156, 38%, 10%);
+}
+
+@media screen and (max-width: 550px) {
+   .hero{
+    margin: 20px;
+    gap: 15px;
+   }
+   .content{
+    margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero{
+     flex-direction: column;
+     width: 100%;
+    }
+    .container_image{
+        background: url(./images/image-product-mobile.jpg);
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    .content{
+        padding: 20px 30px;
+        width: 100%;
+    }
+    .content p:first-child {
+        margin-top: 0px;
+    }
+    
+ }

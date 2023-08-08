@@ -1,0 +1,135 @@
+:root{
+    --u: 1.5vmin;
+    --clr: #777;
+    --bg: #444857;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #131417;
+    background-image: linear-gradient(315deg, #131417 0%, #1e1f26 74%);
+}
+
+.button{
+    position: relative;
+    width: calc(var(--u) * 10);
+    height: calc(var(--u) * 10);
+}
+
+input{
+    display: none;
+}
+
+label{
+    background: var(--bg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: calc(var(--u) * 1.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label::before{
+    content: "49";
+    position: absolute;
+    min-width: 50%;
+    left: 25%;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    background: var(--bg);
+    border-radius: calc(var(--u) * 2);
+    font-size: calc(var(--u) * 2);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: calc(var(--u) * 0.5);
+    box-sizing: border-box;
+    color: var(--clr);
+    line-height: calc(var(--u) * 2.25);
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+    animation: counter-bot 1s ease 0s;
+}
+
+input:checked + label:before{
+    content: "50";
+    color: #fff;
+    background: #ff3c41;
+    bottom: inherit;
+    transition: all 0.5s ease 0s;
+    animation: counter-top 1s ease 0s;
+}
+
+@keyframes counter-top{
+    70%{
+        top: calc(var(--u) * -4.75);
+    }
+}
+
+@keyframes counter-bot{
+    70%{
+        top: inherit;
+        bottom: calc(var(--u) * -5);
+    }
+}
+
+label::after{
+    content: '';
+    width: calc(var(--u) * -8);
+    height: calc(var(--u) * 8);
+    position: absolute;
+    border-radius: 100%;
+    box-sizing: border-box;
+    z-index: -2;
+    animation: disc-gray 1s ease 0s, spin-gray 0.65s ease-in-out 0.25s;
+    transform: rotate(0deg);
+    --pos: 95%;
+    background: radial-gradient(circle at 50% 50%, #fff0 0 62%, var(--bg) 63% 65%, #fff0 66% 100%), radial-gradient(circle at 50% var(--pos), var(--bg) 0 4%, #fff0 4.5% 100%);
+}
+
+@keyframes spin-gray{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin-red{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes disc-gray{
+    70%{
+        width: calc(var(--u) * 19);
+        height: calc(var(--u) * 19);
+    }
+}
+
+@keyframes disc-red{
+    70%{
+        width: calc(var(--u) * 19);
+        height: calc(var(--u) * 19);
+    }
+}
+
+input:checked + label::after{
+    --bg: #ff3c41;
+    --pos: 5%;
+    animation: disc-red 1s ease 0s, spin-red 0.65s ease-in-out 0.25s;
+}
+
+label span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: dislike 0.5s ease 0s;
+}

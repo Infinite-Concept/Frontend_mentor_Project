@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    width: 100%;
+    max-width: 900px;
+    background-color: hsl(244, 38%, 16%);
+    height: 300px;
+    display: flex;
+}
+
+.container_image{
+    background: url(./images/image-header-desktop.jpg);
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsl(277, 64%, 61%);
+}

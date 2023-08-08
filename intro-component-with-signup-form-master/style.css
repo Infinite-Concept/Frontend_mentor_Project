@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --textcolor: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    background-image: url(images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    display: flex;
+    gap: 40px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 50%;
+    margin-top: 10px;
+}
+
+.content h1{
+    color: var(--textcolor);
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.content p{
+    color: var(--textcolor);
+    font-style: 16px;
+}
+
+.form_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.form_content > p{
+    background-color: var(--Blue);
+    color: var(--textcolor);
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+}
+
+form{
+    background-color: var(--textcolor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: relative;
+    box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+}
+
+form div{
+    position: relative;
+}
+
+.form-control img{
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    display: none;
+}
+
+.form-control.error img{
+    display: flex;
+}
+
+.form-control small{
+    color: var(--Red);
+    margin-top: -10px;
+    font-size: 13px;
+    font-weight: 500;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    display: none;
+}
+
+.form-control.error small{
+    display: flex;
+}
+
+input{
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--Grayish-Blue);
+    font-size: 15px;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border: 2px solid var(--Grayish-Blue);
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+[type="submit"]{
+    background-color: var(--Green);
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    color: var(--textcolor);
+    font-weight: 500;
+    box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 11px 20px -13px rgba(0,0,0,0.75);
+}
+
+form p:last-child{
+    color: var(--Grayish-Blue);
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+span{
+    color: var(--Red);
+}
+
+@media only screen and (max-width: 850px) {
+    .hero{
+        width: 90%;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero{
+        width: 100%;
+        padding: 30px;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .hero{
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+    .content{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero{
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+    }
+    .content{
+        width: 40%;
+    }
+    .form_content{
+        width: 53%;
+    }
+    .content h1{
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero{
+        width: 100%;
+        gap: 20px;
+        padding: 10px;
+    }
+    .content{
+        width: 30%;
+    }
+    .form_content{
+        width: 55%;
+    }
+    .content h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero{
+        width: 100%;
+        gap: 35px;
+        padding: 5px;
+    }
+    .content{
+        width: 32%;
+    }
+    .form_content{
+        width: 55%;
+    }
+    .content h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .hero{
+        flex-direction: column;
+    }
+    .container{
+        background-image: url(images/bg-intro-mobile.png);
+        height: auto;
+    }
+    .content{
+        width: 80%;
+        margin-top: 70px;
+        text-align: center;
+    }
+    .form_content{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+}
+
+

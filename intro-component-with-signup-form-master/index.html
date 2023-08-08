@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+<body>
+
+  <div class="container">
+    <div class="hero">
+      <div class="content">
+        <h1>
+          Learn to code by watching others
+        </h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
+
+      <div class="form_content">
+        <p>
+          Try it free 7 days then $20/mo. thereafter
+        </p>
+        <form id="form" class="form" action="">
+          <div class="form-control">
+            <input type="text" placeholder="First Name"  id="First">
+            <img src="./images/icon-error.svg" alt="">
+            <small class="error">error</small>
+          </div>
+
+          <div class="form-control">
+            <input type="text" placeholder="Last Name"  id="Last">
+            <img src="./images/icon-error.svg" alt="">
+            <small>error</small>
+          </div>
+
+          <div class="form-control">
+            <input type="email" name="email" id="email" placeholder="Email Address" >
+            <img src="./images/icon-error.svg" alt="">
+            <small>error</small>
+          </div>
+
+          <div class="form-control">
+            <input type="password" name="password" id="password" placeholder="Password" >
+            <img src="./images/icon-error.svg" alt="">
+            <small>error</small>
+          </div>
+
+          <input type="submit" value="Claim your free trial" id="submit">
+          <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

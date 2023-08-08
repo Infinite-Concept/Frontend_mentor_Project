@@ -1,0 +1,65 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+    --textcolor: #fff;
+    --Heading: 'Poppins' "san-serif";
+    --body: 'Open Sans' "san-serif";
+    --headingWeights: 600;
+    --bodyWeights: 400;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    max-width: 1440px;
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--Violet);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 65px;
+    margin: 0 auto;
+}
+
+.top{
+    margin-top: 10px;
+}
+
+.top_image{
+    width: 12%;
+}
+
+.second{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 70px;
+    gap: 50px;
+}
+
+.col1-img{
+    width: 600px;
+}
+
+.span_col2{
+    margin-top: 40px;
+    width: 500px;
+}
+
+h1{
+    color: var(--textcolor);
+    font-weight: var(--headingWeights);
+    margin-bottom: 20px;
+}
+
+p{
+    color: var(--textcolor);
+    font-weight: var(--bodyWeights);
+    border-left-style: 20px;
+    margin-bottom: 20px;
+}
